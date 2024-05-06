@@ -1,0 +1,42 @@
+{
+  'openapi': '3.0.0',
+  'paths':
+    {
+      '/calculator':
+        {
+          'post':
+            {
+              'operationId': 'CalculatorController_calculate',
+              'parameters':
+                [
+                  {
+                    'name': 'arithmetic-value',
+                    'required': true,
+                    'in': 'header',
+                    'schema': { 'type': 'string' },
+                  },
+                ],
+              'responses': { '201': { 'description': '' } },
+            },
+        },
+      '/auth/token':
+        {
+          'get':
+            {
+              'operationId': 'AuthController_getToken',
+              'parameters': [],
+              'responses': { '200': { 'description': '' } },
+            },
+        },
+    },
+  'info':
+    {
+      'title': 'Calculator API',
+      'description': 'API for performing arithmetic operations',
+      'version': '1.0',
+      'contact': {},
+    },
+  'tags': [],
+  'servers': [{ 'url': 'http://localhost:3000' }],
+  'components': { 'schemas': {} },
+}
