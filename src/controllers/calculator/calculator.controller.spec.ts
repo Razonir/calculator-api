@@ -49,7 +49,6 @@ describe('CalculatorController', () => {
       const result = await controller.calculate(
         { num1, num2 },
         arithmeticValue,
-        'Bearer token',
       );
 
       expect(result).toEqual({ result: 8 });
@@ -65,7 +64,6 @@ describe('CalculatorController', () => {
         await controller.calculate(
           { num1, num2 },
           arithmeticValue,
-          'Bearer token',
         );
       }).rejects.toThrowError(BadRequestException);
     });
